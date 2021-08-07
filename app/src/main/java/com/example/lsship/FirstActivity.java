@@ -60,6 +60,23 @@ public class FirstActivity extends AppCompatActivity {
         });
 
         //intent的用法
+        Button button2 = (Button) findViewById(R.id.button_2);
+        button2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //显式intent
+                //Intent intent = new Intent(FirstActivity.this,
+                //SecondActivity.class);
+                //隐式intent
+                Intent intent = new Intent("com.example.lsship.ACTION START");
+                intent.addCategory("com.example.lsship.MY ThirdCATEGORY");
+                startActivity(intent);
+            }
+        });
+
+        //intent的用法
         Button button3 = (Button) findViewById(R.id.button_3);
         button3.setOnClickListener(new View.OnClickListener()
         {
@@ -78,14 +95,17 @@ public class FirstActivity extends AppCompatActivity {
 
         //intent的用法
         Button button5 = (Button) findViewById(R.id.button_5);
-        button5.setOnClickListener(new View.OnClickListener()
+        button3.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                //打开网页
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://cdnjson.com/images/2021/08/04/39ada99629ae737b7.png"));
+                //显式intent
+                //Intent intent = new Intent(FirstActivity.this,
+                //SecondActivity.class);
+                //隐式intent
+                Intent intent = new Intent("com.example.lsship.ACTION START");
+                intent.addCategory("com.example.lsship.MY CATEGORY");
                 startActivity(intent);
             }
         });

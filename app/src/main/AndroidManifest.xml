@@ -9,21 +9,45 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LsShip">
-
-<!--        2.2.4 注册主活动-->
-        <activity android:name=".FirstActivity"
-            >
+        <activity
+            android:name=".FourthActivity"
+            android:exported="true" />
+        <!-- 2.2.4 注册主活动 -->
+        <activity android:name=".FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
+        <activity
+            android:name=".SecondActivity"
             android:label="宇宙飞船">
             <intent-filter>
-                <action android:name="com.example.lsship.ACTION START"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <category android:name="com.example.lsship.MY CATEGORY"></category>
+                <action android:name="com.example.lsship.ACTION START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.lsship.MY CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ThirdActivity"
+            android:label="过墙梯">
+            <intent-filter>
+                <action android:name="com.example.lsship.ACTION START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.lsship.MY ThirdCATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FourthActivity"
+            android:label="挺挺孩子">
+            <intent-filter>
+                <action android:name="com.example.lsship.ACTION START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.lsship.MY FourthCATEGORY" />
             </intent-filter>
         </activity>
     </application>
